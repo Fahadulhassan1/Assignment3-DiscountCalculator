@@ -25,7 +25,7 @@ import FontAwesome, { Ionicons, SolidIcons, RegularIcons, BrandIcons } from 'rea
 
 const HomeScreen = ({navigation , route}) => {
   const [getValue, setValue] = useState('');
-  const [getDiscount, setDiscount] = useState('0');
+  const [getDiscount, setDiscount] = useState('');
   const [getfinaldiscount, setfinaldiscount] = useState('');
   const [getfinalprice, setfinalprice] = useState('');
   const [getsavedata, setsavedata] = useState([]);
