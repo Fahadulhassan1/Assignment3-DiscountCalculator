@@ -110,7 +110,6 @@ const HomeScreen = ({navigation , route}) => {
         >
           <Text style={styles.saveButton}>Save</Text>
         </TouchableOpacity>
-        
       </View>
     </View>
   );
