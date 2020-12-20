@@ -110,6 +110,7 @@ const HomeScreen = ({navigation , route}) => {
         >
           <Text style={styles.saveButton}>Save</Text>
         </TouchableOpacity>
+        
       </View>
     </View>
   );
@@ -151,7 +152,7 @@ const History = ({navigation, route}) => {
             <Text style = {{color: '#fff',padding: 2,fontSize: 20,textAlign: 'center',}}>
               {item[0]}          -            {item[1]} %       =               {item[2]} 
             </Text>
-            <TouchableOpacity onPress={() => deleteitem(item[0])}>
+            <TouchableOpacity onPress={() => deleteitem(item)}>
             <View>
             <Text style = {{color: '#fff',padding: 2,fontSize: 20,textAlign: 'center', backgroundColor: "brown" , borderWidth: 3 , textAlign: 'center', borderRadius:15 , alignItems: 'center', paddingTop: 5 , justifyContent:"center",width: 40}}>X</Text>
             </View>
