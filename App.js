@@ -17,7 +17,8 @@ import {
   TextInput,
   TouchableOpacity,
   ScrollView,
-  Dimensions
+  Dimensions, 
+  Alert
 } from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
@@ -131,7 +132,33 @@ const History = ({navigation, route}) => {
     ),
   });
   
-
+  navigation.setOptions({
+    headerRight: () => (
+      <View style={{paddingRight: 10}}>
+        <Button
+          title="Clear history"
+          size={24}
+          color="red"
+          onPress={() => {
+createTwoButtonAlert()  }}
+        />
+      </View>
+    ),
+  });
+  const createTwoButtonAlert = () =>
+  Alert.alert(
+    "Delete History",
+    "Are You sure you want to delete?",
+    [
+      {
+        text: "Cancel",
+        onPress: () => console.log("Cancel Pressed"),
+        style: "cancel"
+      },
+      { text: "OK", onPress: () => set1stscreendata([]) }
+    ],
+    { cancelable: false }
+  );
   
   
   const deleteitem = (item) => {
